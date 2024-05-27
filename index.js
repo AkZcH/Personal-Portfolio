@@ -1,58 +1,37 @@
-// console.log("Hello World");
-
-// const age=32;
-
-// console.log(age);
-
-// const pen={
-//     penName:"Parker Vector",
-//     Price: 360,
-//     Rating:4.4,
-//     CGPA: 9.8,
-//     isDiscount: true
+// let student = {
+//     name: "Akshat Chauhan",
+//     age: 19,
+//     cgpa: 9.8,
+//     isPass: true
 // };
 
-// pen["Price"]=pen["Price"] - 90;
+// console.log(student.cgpa);
 
 
-// let a=1241;
-//  a=69;
 
-// console.log(pen["Price"]);
+// console.log("Hello mom");
 
-// console.log(typeof(pen.isDiscount));
+let price=[250, 645, 300];
 
-// let input = 97
+price.forEach(square = (item) =>{
+    console.log(item * item);
 
-// if(100<input<=90){
-//     console.log("A");
-// }
+});
 
-// else if(90<=input<=89){
-//     console.log("A");
-// }
 
-// else if(70<=input<=79){
-//     console.log("B");
-// }
+let companies=["Bloomberg", "microsoft",  "uber", "google",  "IBM", "netflix"];
 
-// else if(60<input<=69){
-//     console.log("C");
-// }
+console.log(companies);
 
-// else if(50<input<=59){
-//     console.log("D");
-// }
 
-// else if(40<input<=49){
-//     console.log("E");
-// }
+console.log(companies.shift());
 
-// else{
-//     console.log("F");
-// }
+console.log(companies);
 
-for(i=1; i<=5; i++){
-    console.log(i,".AkzTraL")
-}
+console.log(companies.splice(1, 1, "ola" ));
 
+console.log(companies);
+
+console.log(companies.push("amazon"));
+
+console.log(companies);

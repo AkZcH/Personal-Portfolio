@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
+@font-face{
+    font-family: Akira;
+    src:url(AKIRA.ttf);
+}
+
 *{
     font-family: 'Lato', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: transparent;
+    background-color: rgb(249, 246, 238)    ;
 }
 
+
+
 h1, h2, h3, h4, h5, h6, span{
-    color: #242424;
+    color: black;
     text-align:center;
     line-height: 1.25;
 }
@@ -29,14 +36,16 @@ nav{
     height: 100px;
     width: 100%;
     margin:0 auto;
-    max-width: 1000px;
+    max-width: 90%;
     display: flex;
     justify-content:space-between;
     align-items: center;
+    background-color: transparent;
 }
 
 .nav__link--list{
     display: flex;
+    
 }
 
 .nav__link--anchor {
@@ -48,21 +57,33 @@ nav{
 
 .nav__link--anchor:hover{
     transform: scale(1.2);
-    background-color: #98c64d;
+    color: #fff;
+    background-color: black;
     transition: all 300ms ease;
 
 }
 
+.icon{
+    background-color: transparent;
+}
+
+.icon2{
+    color: black;
+}
+
+
+
 .link__hover-effect--primary{
     padding: 8px 20px;
     border-radius: 50px;
-    color:white;
-    background-color: black;
+    color: black;
+    background-color:#D2042D;
 }
 
 .link__hover-effect--primary:hover{
     transform: scale(1.2);
     background-color: black;
+    color: #fff;
     transition: all 300ms ease;
 
 }
@@ -72,30 +93,33 @@ nav{
 .link__hover-effect--black{
     padding: 8px 20px;
     border-radius: 50px;
-    color:black;
+    color:yellow;
 } 
 
 .nav__link--anchor::after{
-    content:'';
-    width: 0;
-    height: 3px;
+    content: '';
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -2px; /* Adjust this value to control the thickness of the underline */
+    width: 100%;
+    height: 2px; /* Adjust this value to control the height of the underline */
+    background-color: #000; /* Color of the underline */
+    color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease; /* Transition for the swipe effect */
 }    
 
 .nav__link--anchor:hover::after{
-    width: 100%;
-
+    transform: scaleX(1);
 } 
 
 .personal_logo {
-    /* background-color:black; */
-    /* padding: 8px 20px;
-    border-radius: 50px; */
+    color: black;
     transition: all 300ms ease;
     font-size: 25px;
     font-weight: bolder;
+    font-family: 'Kanit', sans-serif;
+
 }
 
 #about_me{
@@ -151,7 +175,7 @@ nav{
 
 .purple_text{
     font-weight:bolder;
-    color: black;
+    color: white;
 }
 
 #about_me{
@@ -254,75 +278,7 @@ nav{
     transition: all 300ms ease;
 }
 
-/* -----------------------------------Socials----------------------------------------- */
-
-/* .my_socials{
-    text-align: left;
-    padding:30px 100px;
-}
-
-.social--image{
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    justify-content: center;
-}
-
-.social_list{
-    justify-content: start;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.social_image--wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
-    padding:0 40px;
-    margin-top: 20px;
-    margin-left: 80px;
-    margin-bottom: 20px;
-}
-
-.social{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    padding-bottom: 20px;
-    position: relative;
-}
-
-.social_img{
-    width: 80px;
-    max-width: 1000px;
-    display: flex;
-    justify-content: center;
-}    
-
-.social_name{
-    display: flex;
-    justify-content: center;
-    transform: scale(0);
-    margin-top: 40px;
-    margin-left: 120px;
-    position: absolute;
-    bottom: 0;
-}    
-
-.social:hover .social_name{
-    transform: scale(1);
-    transition: all 300ms ease;
-}
-
-.social:hover .social_img{
-    filter: brightness(120%);
-    transform:scale(1.2);
-    transition: all 300ms ease;
-}
- */
+/*---------------------------------------------------socials page styling---------------------------------------------------------------*/
 
 .personal_logo_1{
     font-size: 25px;
@@ -432,7 +388,7 @@ nav{
     text-align: left;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 2000px;
     height: 100vh;
 
 }
@@ -500,11 +456,568 @@ nav{
     text-align: left;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 2000px;
     height: 100vh;
  
+}
+
+/*--------------------------------------------------------------- Portfolio---------------------------------------------------------------- */
+
+/* CSS styles for your portfolio page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: transparent;
+    color: #D2042D;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* CSS styles for the resume template */
+/* CSS styles for the resume template */
+.resume {
+    max-width: 98%; /* Set max-width to 90% of the viewport width */
+    margin: 0 auto;
+    padding: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping if content overflows */
+}
+
+.profile-image {
+    width: 200px; /* Set width of profile image */
+    height: 200px; /* Set height of profile image */
+    border-radius: 0%; /* Make it a circle */
+    overflow: hidden; /* Hide overflowing content */
+    margin-right: 20px; /* Add margin to the right */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+.profile-image img {
+    width: 100%; /* Make sure the image fills the container */
+    height: auto;
+}
+
+.resume h2 {
+    text-align: center; /* Center align the heading */
+    width: 100%; /* Make sure it spans the full width */
+}
+
+.bio h2,
+.education h2,
+.skills h2,
+.projects h2 {
+    text-align: left; /* Align the headings to the left */
+    color: black;
+}
+
+.bio, .education, .skills, .projects {
+    margin-bottom: 30px;
+    color: black;
+    width: calc(100% - 420px); /* Calculate width to fit remaining space */
+    font-size: 24px; /* Increase the font size of subheadings */
+
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: black;
+
+}
+
+p {
+    margin-bottom: 0;
+    border-color:  black;
+
+}
+
+.projects{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+
+/* Style for the Instagram cards */
+.social-card {
+    background-color:white;
+    border-radius: 8px;
+    border-color: black;;
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+    margin: 20px;
+    width: 250px; /* Adjust the width of the card as needed */
+    height: 300px;
+    text-align: center;
+}
+
+/* Style for the icon container */
+.icon-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.icon-container img {
+    max-width: 100px; /* Maximum width for the icon */
+}
+
+/* Style for the Instagram handle */
+.social-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Additional styles for hover effect */
+.social-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.project_name{
+    display: flex;
+    justify-content: center;
+    transform: scale(0);
+    margin-top: 10px;
+    color: black;
+}
+
+.project:hover .project_name{
+    transform: scale(1);
+    transition: all 200ms ease;
+}
+
+
+/* CSS styles for the home page */
+/* CSS styles for the home page */
+.container {
+    max-width: 100%;
+    margin: 60px auto;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: left; /* Center horizontally */
+    margin-left: 150px;
+}
+
+.profile-container {
+    width: 360px;
+    margin-right: 40px;
+    margin-left:-100px;
+}
+
+.profile-image:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1); /* Shadow effect on hover */
+}
+
+
+.profile img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1); /* Shadow effect on hover */
+
+}
+
+.info-container {
+    max-width: calc(100% - 170px); /* Adjusted for the profile container width and margin */
+    margin-left: 20px; /* Add margin to the left */
+    justify-content: center;
+}
+
+.info-container p {
+    margin: 0;
+    justify-content: center;
+    font-size: 50px;
+    font-family: "Arial", sans-serif; /* Change font family */
+}
+.info-container .medium {
+    font-size: 25px;
+    font-weight:bolder;
+    font-family: "Arial", sans-serif; /* Change font family */
+    padding-left: 50px;
+    color: black;
+}
+
+.info-container .big {
+    font-size: 60px;
+    color: black;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding-top: 0%;
+    max-height: 60px;
+    background-color: transparent;
 }
 
 
 
 
+.info-container .small {
+    font-size: 16px;
+    margin-left: 60px;
+    color: black;
+
+}
+
+.links {
+    display: flex;
+}
+
+.links a {
+    margin-right: 10px; /* Adjust spacing between links */
+}
+
+
+/* ----------------------------------------------light-themed-design--------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+@font-face{
+    font-family: Akira;
+    src:url(AKIRA.ttf);
+}
+
+*{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, span{
+    color: #242424;
+    text-align:center;
+    line-height: 1.25;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+li{
+    list-style:none;
+}
+
+/* NAVBAR */
+
+nav{
+    height: 100px;
+    width: 100%;
+    margin:0 auto;
+    max-width: 90%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.nav__link--list{
+    display: flex;
+}
+
+.nav__link--anchor {
+    margin: 0 20px;
+    color: transparent;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav__link--anchor:hover{
+    transform: scale(1.2);
+    background-color: black;
+    transition: all 300ms ease;
+
+}
+
+.icon{
+    background-color: transparent;
+}
+
+.icon2{
+    color:black;
+}
+
+
+
+.link__hover-effect--primary{
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: white;
+    background-color:#4b0082;
+}
+
+.link__hover-effect--primary:hover{
+    transform: scale(1.2);
+    background-color:#4b0082;
+    color: white;
+    transition: all 300ms ease;
+
+}
+
+
+
+.link__hover-effect--black{
+    padding: 8px 20px;
+    border-radius: 50px;
+    color:black;
+} 
+
+.nav__link--anchor::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust this value to control the thickness of the underline */
+    width: 100%;
+    height: 2px; /* Adjust this value to control the height of the underline */
+    background-color: yellow; /* Color of the underline */
+    color: yellow;
+    transform: scaleX(0);
+    transition: transform 0.3s ease; /* Transition for the swipe effect */
+}    
+
+.nav__link--anchor:hover::after{
+    transform: scaleX(1);
+} 
+
+.personal_logo {
+    color: #4b0082;
+    transition: all 300ms ease;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: Akira;
+    background-color: transparent;
+
+
+}
+
+#about_me{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about_me--info_container{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.about_me--picture_mask{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 1);
+    margin-bottom: 20px;
+}
+
+.about_me--picture_mask:hover{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 1);
+    margin-bottom: 20px;
+    transition: all 300ms ease;
+}
+
+.about_me--picture{
+    height: 100px;
+    width: 100px;
+}
+
+.about_me--picture:hover{
+    height: 120px;
+    width: 120px;
+    transition: all 300ms ease;
+}
+
+.navbar{
+    background-color: aqua;
+    height: 100px;
+    width: 100%;
+}
+
+.purple_text{
+    font-weight:bolder;
+    color: black;
+}
+
+#about_me{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    justify-content: center;
+}
+
+
+
+
+
+.flex_1{
+    flex: 1;
+}
+
+.about_me--info{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about_me--links{
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 100px;
+    color: #242424;
+}
+
+.about_me--intro{
+    color: black;
+}
+
+.about_me--image_container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.about_me--image{
+    height: 400px;
+    margin: 0 auto;
+}
+
+/* ---------------------------------------------------CSS code for the works section------------------------------------------------- */
+/* CSS styles for the projects section */
+.works {
+    display: flex;
+    align-items: center;
+}
+
+.thumbnail {
+    flex: 0 0 40%; /* Thumbnail container covers 40% of the width */
+    max-width: 30%; /* Limit the maximum width */
+    border: 2px solid #ccc; /* Add border to the thumbnail container */
+    margin-left: 120px;
+    padding: 10px; /* Add padding to the thumbnail container */
+    border-radius: 10px; /* Add border radius */
+    overflow: hidden; /* Hide image overflow */
+}
+
+.thumbnail img {
+    width: 100%; /* Make sure the image fills the container */
+    height: auto;
+    border-radius: 10px; /* Add border radius */
+
+}
+
+
+.info {
+    flex-grow: 1; /* Allow the info container to grow and take remaining space */
+    margin-left: 40px;
+}
+
+.info h2 {
+    margin-top: 0; /* Remove default margin */
+}
+
+.info p {
+    margin-bottom: 10px; /* Add spacing between paragraphs */
+    margin-left: ;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Example button color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Example hover color */
+}
+
+/* body{
+    background-image: url('back2.jpg');
+    background-size:contain;
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+
+
+.hire-me-button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 50px;
+    padding: 15px 30px; /* Padding for button size */
+    background-color: black; /* Button background color */
+    color: whitesmoke; /* Button text color */
+    font-size: 18px; /* Font size for text */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #000; /* Border color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+}
+
+
+.hire-me-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
